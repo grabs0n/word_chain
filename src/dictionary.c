@@ -154,7 +154,7 @@ bool unknownWord(char* word, const char* dictionary) {
             // Відкриваємо файл словника для додавання нового слова
             FILE *file = fopen(dictionary, "a");
             // Записуємо слово у файл словника
-            fprintf(file, "%s\n", word);
+            fprintf(file, "\n%s", word);
             // Закриваємо файл словника
             fclose(file);
             return true;
