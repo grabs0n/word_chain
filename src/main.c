@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <dirent.h>
 #include <string.h>
+#include <ctype.h>
 #include "dictionary.h"
 
 
@@ -122,7 +123,7 @@ int main(void)
     {
     //Хід гравця
         //Перевірка першої літери введеного слова
-        if (word[0] == current_letter) {
+        if (word[0] == tolower(current_letter)) {
             //Перевірка слова
             if (!check_word(word, dictionary)) {
                 continue;
